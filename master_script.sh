@@ -34,3 +34,8 @@ sleep 5
 ssh  ubuntu@ip-172-31-29-166 '(cat ~/autom/dockercompose.log)'
 
 echo "##### Begin Installation of Open SSL #####"
+scp -rp /home/ubuntu/one/openssl_one.sh ubuntu@ip-172-31-29-166:~/
+ssh  ubuntu@ip-172-31-29-166 '(ls -lrt ~/openssl_one.sh)'
+ssh  ubuntu@ip-172-31-29-166 '(bash ~/openssl_one.sh)'
+sleep 5
+ssh  ubuntu@ip-172-31-29-166 '(cat ~/autom/openssl.log)'
