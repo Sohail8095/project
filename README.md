@@ -134,3 +134,22 @@ to check wether it is installed or not
 ```console
 docker-compose --version
 ```
+
+
+# Git
+
+-> To install git for ubuntu
+
+By running a single command you can able to install git package
+
+```console
+apt-get install git-core
+```
+
+-> Check version
+
+verify wether it is installrd or not
+
+```console
+git --version
+```
