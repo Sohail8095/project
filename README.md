@@ -108,3 +108,28 @@ Finally check if the Docker is successfully installed or not
 ```console
 docker --version
 ```
+
+
+# Docker Copmose
+
+Initially write "version='1.18.0'" to dowload a particular version package
+
+-> Installing Docker Compose
+
+Install the package using the below link
+
+```console
+sudo curl -L https://github.com/docker/compose/releases/download/$version/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose > ~/autom/dockercompose.log
+```
+
+After installing set the permissions
+
+```console
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+to check wether it is installed or not
+
+```console
+docker-compose --version
+```
