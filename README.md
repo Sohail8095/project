@@ -1,6 +1,34 @@
 # Automating Installation of Below Software Packages
 
-## ->Docker 18.06
+This is a brief for the automatic installation of the sofware packages such as NVM, Node, Docker, Docker Compose, Openssl and Git
+
+The files for the automation is written in 'Shell Scripting' language. These are installed in Ubuntu Server 16.04 LTS.
+
+# Prerequisite
+
+After launching two servers in ubuntu, we have to establish a connection between these servers. Such that if werun a script in one server it will automatically installed in another one.
+
+For establishing connection
+
+```console
+ssh-keygen -t rsa
+cd .ssh
+cat id_rsa.pub
+```
+
+copy the content of id_rsa.pub in and in server 2 run the below commands
+
+```console
+cd .ssh
+vi authorized_keys
+```
+
+paste the copied content in the above
+
+By doing this we can successfully establish the connection between two servers
+
+
+# ->Docker 18.06
 we have to give the initials for the installation used in yhe script such as
 
 red="$(tput setaf 1)"
@@ -13,7 +41,7 @@ reset="$(tput sgr0)"
 
 bold="$(tput bold)"
 
-# Old Versions
+# Old Version
 
 to uninstall old if it is present then run this command
 ```console
