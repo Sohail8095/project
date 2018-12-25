@@ -2,6 +2,15 @@
 
 version="1.1.1"
 
+cd ~/
+
+if [ ! -d "autom" ]; then
+  # Control will enter here if ~/ doesn't exist.
+  mkdir autom
+fi
+
+cd autom
+
 #install openssl for ubuntu, for $version
 wget https://www.openssl.org/source/openssl-$version.tar.gz > ~/autom/openssl.log
 tar xvf openssl-$version.tar.gz
