@@ -28,7 +28,7 @@ paste the copied content in the above
 By doing this we can successfully establish the connection between two servers
 
 
-# ->Docker 18.06
+# Docker 18.06
 we have to give the initials for the installation used in yhe script such as
 
 red="$(tput setaf 1)"
@@ -152,4 +152,49 @@ verify wether it is installrd or not
 
 ```console
 git --version
+```
+
+
+# Open SSL
+
+To download particular version, initially write 'version="1.1.1"'
+
+-> Install Open SSL
+
+to extract run the following command
+
+```console
+wget https://www.openssl.org/source/openssl-$version.tar.gz
+```
+
+to tar and zip run
+
+```console
+tar xvf openssl-$version.tar.gz
+```
+
+to open the file run
+
+```console
+cd openssl-$version
+```
+
+to explore the file
+
+```console
+sudo ./config -Wl,--enable-new-dtags,-rpath,'$(LIBRPATH)'
+```
+
+to execute
+
+```console
+sudo make
+
+sudo make install
+```
+
+To verify wether it is installed or not
+
+```console
+openssl --version
 ```
