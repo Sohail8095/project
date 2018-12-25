@@ -198,3 +198,57 @@ To verify wether it is installed or not
 ```console
 openssl --version
 ```
+
+# NVM & Node.JS
+
+Initially give node & nvm versions to download of a particular version
+
+write 'version=8.12.0"
+
+nvm_version="v0.33.2"
+
+-> Install nvm in a directory
+
+```console
+wget https://raw.githubusercontent.com/creationix/nvm/$nvm_version/install.sh
+```
+
+run the script 
+
+```console
+bash install.sh
+```
+
+Export the command from nvm.log which loads the nvm 
+
+----> Node.JS
+
+Node.js version comes default with the NVM package
+
+we have to find the version first locally,if find run locally otherwise run remotely
+
+```console
+nvm ls | grep  "$version"
+```
+
+write 'for loop' condition for above code
+
+Find the version remotely
+
+```console
+nvm ls-remote | grep  "$version"
+```
+
+write 'for loop' condition for above code
+
+If found install Node.JS for $version
+
+```console
+nvm install $version
+```
+
+Finally use the Node.JS
+
+```console
+nvm use $version
+```
