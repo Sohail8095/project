@@ -41,14 +41,14 @@ reset="$(tput sgr0)"
 
 bold="$(tput bold)"
 
-Old Version
+->Old Version
 
 to uninstall old if it is present then run this command
 ```console
 sudo apt-get remove docker docker-engine docker.io
 ```
 
-Update
+->Update
 
 to update ubuntu after removing the older version (if present)
 
@@ -57,7 +57,7 @@ sudo apt-get update
 
 sudo apt-get libcurl4
 ```
-Installing
+->Installing
 
 To install a package we have to allow apt to use a repository over HTTPS
 
