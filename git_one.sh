@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #install git for ubuntu 16.04
-apt-get install git-core
+apt-get install git-core > ~/autom/git.log
 
 #installed git
 git --version
