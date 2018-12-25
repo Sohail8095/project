@@ -1,6 +1,6 @@
 
 # **************************************************************************
-# Author : Syed Sohail Ahmad 
+# Author : Syed Sohail Ahmed
 # 
 # This script will install nvm, node, Docker, Docker Compose, GIT and OpenSSL
 # over ssh to the defined hostname and confirms the succesful installation
