@@ -1,14 +1,15 @@
 # Automating Installation of Below Software Packages
 
-This is a brief for the automatic installation of the sofware packages such as NVM, Node, Docker, Docker Compose, Openssl and Git
+This is a brief illustration with regards to the automatic installation of the sofware packages such as NVM, Node, Docker, Docker Compose, Openssl and Git using scripting.
 
 The files for the automation is written in 'Shell Scripting' language. These are installed in Ubuntu Server 16.04 LTS.
+Parent script is the ```master.sh``` script which internally invokes the other child scripts over ssh onto defined hostnames in order to execute the respective installations.
 
-# Prerequisite
+## Prerequisite(s)
 
-After launching two servers in ubuntu, we have to establish a connection between these servers. Such that if werun a script in one server it will automatically installed in another one.
+After launching two servers in ubuntu, we have to establish a connection between these servers. Such that if we run a script in one server it will automatically get installed in another one.
 
-For establishing connection
+Below are the set of commands for generating the rsa keys of server:
 
 ```console
 ssh-keygen -t rsa
@@ -16,7 +17,7 @@ cd .ssh
 cat id_rsa.pub
 ```
 
-copy the content of id_rsa.pub in and in server 2 run the below commands
+copy the content of id_rsa.pub in server 2 run the below commands
 
 ```console
 cd .ssh
@@ -25,10 +26,11 @@ vi authorized_keys
 
 paste the copied content in the above
 
-By doing this we can successfully establish the connection between two servers
+By doing this we can successfully establish the passwordless ssh connection between two servers
+test it by executing : ```ssh username@hostname```
 
 
-# Docker 18.06
+### Docker 18.06
 we have to give the initials for the installation used in yhe script such as
 
 red="$(tput setaf 1)"
@@ -110,7 +112,7 @@ docker --version
 ```
 
 
-# Docker Copmose
+### Docker Compose
 
 Initially write "version='1.18.0'" to dowload a particular version package
 
@@ -136,7 +138,7 @@ docker-compose --version
 ```
 
 
-# Git
+### Git
 
 -> To install git for ubuntu
 
@@ -155,7 +157,7 @@ git --version
 ```
 
 
-# Open SSL
+### Open SSL
 
 To download particular version, initially write 'version="1.1.1"'
 
@@ -199,7 +201,7 @@ To verify wether it is installed or not
 openssl --version
 ```
 
-# NVM & Node.JS
+### NVM & Node.JS
 
 Initially give node & nvm versions to download of a particular version
 
